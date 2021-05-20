@@ -7,7 +7,6 @@ const userController = {
   },
   async createUser(req, res, next) {
     const body = req.body
-    console.log(body)
 
     const saltRounds = 10
     const passwordHash = await bcrypt.hash(body.password, saltRounds)

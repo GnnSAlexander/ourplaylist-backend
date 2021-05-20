@@ -1,8 +1,8 @@
-POST http://localhost:3123/user
+POST http://localhost:3123/login
 Content-Type: application/json
 
 {
     "name": "Alexander",
     "username": "GnnSAlexander",
     "password": "mipassword"
-}
+} 
