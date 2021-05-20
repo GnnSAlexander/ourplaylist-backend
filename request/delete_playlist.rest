@@ -1,0 +1,1 @@
+DELETE http://localhost:3123/api/playlist/60a6cf05cc493d23df10575a

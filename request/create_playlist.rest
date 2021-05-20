@@ -1,0 +1,8 @@
+POST http://localhost:3123/api/playlist
+Content-Type: application/json
+
+{
+    "name": "Rap",
+    "image": "GnnSAlexander",
+    "isPublic": false
+} 
