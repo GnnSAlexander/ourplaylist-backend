@@ -1,5 +1,6 @@
 const HANDLE_ERRORS = {
-  CastError: (res, { message }) => res.status(400).send({ error: message }),
+  CastError: (res, { message }) =>
+    res.status(400).send({ error: message }).end(),
 
   MongoError: (res, { message }) => res.status(400).send({ error: message }),
 
@@ -17,7 +18,7 @@ const HANDLE_ERRORS = {
 }
 
 module.exports = (error, request, response, next) => {
-  console.error(error.name, error)
+  console.error(error.name, error.message)
   const handler = HANDLE_ERRORS[error.name] || HANDLE_ERRORS.DefaultError
 
   handler(response, error)

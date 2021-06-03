@@ -1,0 +1,10 @@
+POST http://localhost:3123/api/song
+Content-Type: application/json
+
+{
+  "title": "Amazon Echo Dot con reloj (4ta Gen) | Review en español",
+  "song_id": "2zgTAev1u8c",
+  "picture" : "https://i.ytimg.com/vi/2zgTAev1u8c/mqdefault.jpg",
+  "type": "youtube",
+  "playlistId": "60b67d2805bcdf090a022bb7"
+}

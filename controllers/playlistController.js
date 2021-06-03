@@ -10,7 +10,7 @@ const playlistController = {
     const { id } = req.params
 
     try {
-      const playlist = await Playlist.findById(id)
+      const playlist = await Playlist.findById(id).populate("songs")
 
       res.json(playlist)
     } catch (error) {
@@ -20,12 +20,13 @@ const playlistController = {
   async createPlaylist(req, res, next) {
     const body = req.body
 
-    if (!body?.name) {
-      res.status(400).send({ error: "name is required" })
+    if (!body?.title) {
+      res.status(400).send({ error: "title is required" })
+      return
     }
 
     const playlist = new Playlist({
-      name: body.name,
+      title: body.title,
       image: body.image || "",
       isPublic: body.isPublic || false,
       date_added: new Date(),

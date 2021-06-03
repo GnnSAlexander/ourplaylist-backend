@@ -1,7 +1,7 @@
 const { model, Schema, SchemaTypeOptions } = require("mongoose")
 
 const playlistSchema = new Schema({
-  name: String,
+  title: String,
   image: String,
   songs: [
     {
